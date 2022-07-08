@@ -1,8 +1,22 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import { createRouter, createWebHistory } from "vue-router";
 
-const app = createApp(App);
+import Home from "./pages/Home.vue";
+import Course from "./pages/Course.vue";
+import Lesson from "./pages/Lesson.vue";
 
-app.use(router);
-app.mount("#app");
+const routes = [
+  { name: "home", path: "/", component: Home },
+  { name: "course", path: "/courses/:courseId", component: Course },
+  {
+    name: "lesson",
+    path: "/courses/:courseId/lessons/:lessonId",
+    component: Lesson,
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
