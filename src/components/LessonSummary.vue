@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="summary">
+  <section class="summary-lesson">
     <div>
       <div class="title">
         <h2>
@@ -39,3 +39,9 @@ defineProps({
     </div>
   </section>
 </template>
+
+<style>
+.summary-lesson {
+  background: blue;
+}
+</style>

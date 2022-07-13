@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="summary">
+  <section class="summary-course">
     <div>
       <div class="title">
         <h2>
@@ -31,3 +31,9 @@ defineProps({
     </div>
   </section>
 </template>
+
+<style>
+.summary-course {
+  background: red;
+}
+</style>

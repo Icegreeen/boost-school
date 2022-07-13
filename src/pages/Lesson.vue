@@ -1,10 +1,11 @@
 <script setup>
 import courses from "../courses";
 import { useRoute } from "vue-router";
-const route = useRoute();
 
 import { vueVimeoPlayer } from "vue-vimeo-player";
 import CompleteAndContinueButton from "../components/CompleteAndContinueButton.vue";
+
+const route = useRoute();
 
 const { courseId, lessonId } = route.params;
 const course = courses.find((course) => course.id === parseInt(courseId));
